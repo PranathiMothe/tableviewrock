@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  TableViewRock
 //
 //  Created by Kolakani,Satyakanth on 2/19/19.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
-{
-    var cities = ["Edinburgh", "London", "Aberdeen", "Oxford", "Cambridge"]
+class TouristSitesViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+    
+    var tourist = ["Goa", "Uppal", "CanadaMuseum", "Himayatnagar", "Narayaguda"]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cities.count
+        return tourist.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "city")!
-        cell.textLabel?.text = cities[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tourist")!
+        cell.textLabel?.text = tourist[indexPath.row]
         return cell
     }
     
